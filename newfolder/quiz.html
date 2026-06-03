@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Start Screen -->
+      <div class="screen active" id="start-screen">
+        <h1>Quiz Time!</h1>
+        <p>Test your knowledge with our fun quiz game.</p>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+          <h2 id="question-text">Question goes here</h2>
+
+          <div class="quiz-info">
+            <p>
+              Question
+              <span id="current-question">1</span>
+              of
+              <span>5</span>
+            </p>
+
+            <p>
+              Score:
+              <span id="score">0</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Answer Options -->
+        <div id="answers-container" class="answers-container">
+          <!-- Answers will come from JavaScript -->
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="screen">
+        <h1>Quiz Results</h1>
+
+        <div class="result-info">
+          <p>
+            You scored
+            <span id="final-score">0</span>
+            out of
+            <span id="max-score">5</span>
+          </p>
+
+          <div id="results-message">
+            Good job! You have great knowledge of the subject. Keep it up!
+          </div>
+
+          <button id="restart-btn">Restart Quiz</button>
+          <script src="quiz.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
